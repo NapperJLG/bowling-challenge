@@ -1,5 +1,6 @@
 var Frame = function() {
   this.score = 0
+  this.frameResult = []
 };
 
 Frame.prototype.frameScore = function () {
@@ -7,5 +8,5 @@ Frame.prototype.frameScore = function () {
 };
 
 Frame.prototype.rolls = function (roll1, roll2) {
-  this.score += (roll1 + roll2);
+  this.frameResult.push(roll1, roll2);
 };
