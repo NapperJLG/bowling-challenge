@@ -9,4 +9,11 @@ Frame.prototype.frameScore = function () {
 
 Frame.prototype.rolls = function (roll1, roll2) {
   this.frameResult.push(roll1, roll2);
+  this.frameCount += 1
+};
+
+Frame.prototype.bonusRoll = function (roll3) {
+    this.frameResult.push(roll3);
+
+
 };

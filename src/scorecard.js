@@ -2,6 +2,7 @@ var Scorecard = function() {
   this.frameResults = []
   this.score = 0
   this.flatFrameResult = []
+  this.frameCount = 0
 };
 
 Scorecard.prototype.currentScore = function () {
@@ -11,7 +12,9 @@ Scorecard.prototype.currentScore = function () {
 };
 
 Scorecard.prototype.addFrame = function (frame) {
-  this.frameResults.push(frame.frameResult)
+  this.frameCount += 1;
+  this.frameResults.push(frame.frameResult);
+
 };
 
 Scorecard.prototype.flattenFrameResults = function (arr) {
