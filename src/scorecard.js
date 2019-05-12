@@ -17,6 +17,12 @@ Scorecard.prototype.addFrame = function (frame) {
 
 };
 
+Scorecard.prototype.bonusRoll = function (roll3) {
+  if (this.frameCount === 10 && arrSum(this.frameResults[9]) === 10) {
+    this.frameResults.push(roll3);
+  } else return;
+  };
+
 Scorecard.prototype.flattenFrameResults = function (arr) {
   this.flatFrameResult = arr.reduce((total, currentValue) => total.concat(currentValue), this.flatFrameResult);
 };
